@@ -42,7 +42,9 @@ Phase 1 — Basic Compound Interest Calculator
 Phase 2 — Compound Interest + Monthly Investment
 
 Phase 3 — Compare Different Investment Returns
-Part 4 — Actual Calculation + Comparison Result
+        — Actual Calculation + Comparison Result
 
 # How many returns do you want to compare?How many returns do you want to compare?
 # Add a "View Details" page
+
+Phase 4 - show the detail of each month at differet html

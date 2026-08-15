@@ -296,6 +296,71 @@ calculateButton.addEventListener("click", function() {
     // DISPLAY RESULT
     // ==========================================
 
-    result.innerHTML = resultHTML;
+    // ==========================================
+// DISPLAY RESULT
+// ==========================================
+
+result.innerHTML = resultHTML;
+
+
+// ==========================================
+// CREATE VIEW DETAILS BUTTON
+// ==========================================
+
+const viewDetailsButton =
+    document.createElement("button");
+
+viewDetailsButton.textContent =
+    "View Details";
+
+
+// Add button to result area
+result.appendChild(viewDetailsButton);
+
+
+// ==========================================
+// VIEW DETAILS BUTTON
+// ==========================================
+
+viewDetailsButton.addEventListener(
+    "click",
+    function() {
+
+        // Create an object containing
+        // all information entered by the user
+        const investmentData = {
+
+            initialInvestment:
+                initialInvestment,
+
+            monthlyInvestment:
+                monthlyInvestment,
+
+            investmentPeriod:
+                investmentPeriod,
+
+            returnRates:
+                returnRates
+        };
+
+
+        // Convert the JavaScript object
+        // into a JSON string
+        const dataToSave =
+            JSON.stringify(investmentData);
+
+
+        // Save the data in browser storage
+        localStorage.setItem(
+            "investmentData",
+            dataToSave
+        );
+
+
+        // Go to the detail page
+        window.location.href =
+            "detail.html";
+    }
+);
 
 });
