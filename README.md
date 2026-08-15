@@ -38,3 +38,11 @@ Phase 1 — Basic Compound Interest Calculator
 ├── index.html
 ├── style.css
 └── script.js
+
+Phase 2 — Compound Interest + Monthly Investment
+
+Phase 3 — Compare Different Investment Returns
+Part 4 — Actual Calculation + Comparison Result
+
+# How many returns do you want to compare?How many returns do you want to compare?
+# Add a "View Details" page
