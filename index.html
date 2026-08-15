@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Investment Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Investment Calculator</h1>
+
+    <h2>Compound Interest Calculator</h2>
+
+    <label for="initialInvestment">Initial Investment (RM)</label>
+    <input type="number" id="initialInvestment">
+    <!-- creates the input box. / JavaScript will use this ID to get the user's input. -->
+
+    <br><br>
+
+    <label for="monthlyInvestment">Monthly Investment (RM)</label>
+    <input type="number" id="monthlyInvestment">
+
+    <br><br>
+
+    <label for="annualReturn">Annual Return (%)</label>
+    <input type="number" id="annualReturn">
+
+    <br><br>
+
+    <label for="investmentPeriod">Investment Period (Years)</label>
+    <input type="number" id="investmentPeriod">
+
+    <br><br> <!--  Line Break -->
+
+    <button id="calculateButton">Calculate</button>
+
+    <h2>Result</h2>
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
