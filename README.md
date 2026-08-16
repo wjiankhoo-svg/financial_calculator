@@ -62,6 +62,39 @@ Phase 5 — improve the UI + add a portfolio growth chart.
 Phase 6 — Separate Details and Graph
 
 Phase 7 — Target Calculator:
+│
+├── 7.4 — Why did I add "Current Monthly Investment"?
+          This is important because of your original idea. 
+          We don't just want: "How much do I need?"
+          We also want: "Am I currently on track?
+
+
+                 Find monthly investment
+                          │
+                          ↓
+              ┌────────────────────┐
+              │ low = RM0           │
+              │ high = target       │
+              └─────────┬──────────┘
+                        ↓
+                  Find middle
+                        ↓
+               Calculate final value
+                        ↓
+              Does it reach target?
+                  /           \
+                YES            NO
+                 ↓              ↓
+          Search LOWER     Search HIGHER
+                 │              │
+                 └──────┬───────┘
+                        ↓
+                  Repeat again
+                        ↓
+               Difference < RM0.01
+                        ↓
+                Return `high`
+
 
 Phase 8 - let user to choose how many year they want to calculate
         - also need like can go bck calculator or go view graph, bck to calculator or view detail

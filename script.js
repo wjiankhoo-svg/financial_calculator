@@ -9,6 +9,8 @@ const numberOfReturnsInput = document.getElementById("numberOfReturns");
 
 
 // Buttons
+const targetButton =
+    document.getElementById("targetButton");
 const createReturnInputsButton = document.getElementById("createReturnInputsButton");
 const calculateButton = document.getElementById("calculateButton");
 
@@ -426,5 +428,19 @@ viewGraphButton.addEventListener(
             "graph.html";
     }
 });
+
+// ==========================================
+// TARGET CALCULATOR
+// ==========================================
+
+targetButton.addEventListener(
+    "click",
+    function() {
+
+        window.location.href =
+            "target.html";
+
+    }
+);
 
 });

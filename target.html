@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Target Calculator</title>
+
+    <link
+        rel="stylesheet"
+        href="stle.css"
+    >
+
+</head>
+
+
+<body>
+
+    <h1>Investment Target Calculator</h1>
+
+    <p>
+        Find out how much you need to invest
+        every month to reach your target.
+    </p>
+
+
+    <!-- =====================================
+         TARGET AMOUNT
+         ===================================== -->
+
+    <label for="targetAmount">
+
+        Target Amount (RM)
+
+    </label>
+
+    <input
+        type="number"
+        id="targetAmount"
+        min="0"
+    >
+
+
+    <br><br>
+
+
+    <!-- =====================================
+         INITIAL INVESTMENT
+         ===================================== -->
+
+    <label for="targetInitialInvestment">
+
+        Initial Investment (RM)
+
+    </label>
+
+    <input
+        type="number"
+        id="targetInitialInvestment"
+        min="0"
+    >
+
+
+    <br><br>
+
+
+    <!-- =====================================
+         MONTHLY INVESTMENT
+         ===================================== -->
+
+    <label for="currentMonthlyInvestment">
+
+        Current Monthly Investment (RM)
+
+    </label>
+
+    <input
+        type="number"
+        id="currentMonthlyInvestment"
+        min="0"
+    >
+
+
+    <br><br>
+
+
+    <!-- =====================================
+         INVESTMENT PERIOD
+         ===================================== -->
+
+    <label for="targetInvestmentPeriod">
+
+        Investment Period (Years)
+
+    </label>
+
+    <input
+        type="number"
+        id="targetInvestmentPeriod"
+        min="1"
+    >
+
+
+    <br><br>
+
+
+    <!-- =====================================
+         EXPECTED RETURN
+         ===================================== -->
+
+    <label for="targetReturn">
+
+        Expected Annual Return (%)
+
+    </label>
+
+    <input
+        type="number"
+        id="targetReturn"
+        min="0"
+    >
+
+
+    <br><br>
+
+
+    <!-- =====================================
+         CALCULATE BUTTON
+         ===================================== -->
+
+    <button id="targetCalculateButton">
+
+        Calculate Target
+
+    </button>
+
+
+    <br><br>
+
+
+    <!-- =====================================
+         RESULT
+         ===================================== -->
+
+    <div id="targetResult"></div>
+
+
+    <br>
+
+
+    <!-- =====================================
+         NAVIGATION
+         ===================================== -->
+
+    <button id="backButton">
+
+        ← Calculator
+
+    </button>
+
+
+    <script src="target.js"></script>
+
+</body>
+
+</html>
