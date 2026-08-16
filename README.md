@@ -105,6 +105,9 @@ Phase 11 — Profit vs Contribution Analysis
 # detail.html = Details
 # graph.html = Graph
 
+Phase 12 — Input Validation & Error Handling
+
+
 
 Phase 8 — Target vs Reality
 
@@ -112,7 +115,7 @@ Phase 9 — What-If Investment Scenarios
 
 Phase 10 — Advanced Return Comparison
 
-Phase 12 — Input Validation & Error Handling
+
 
 Phase 13 — Accuracy & Calculation Testing
 

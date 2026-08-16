@@ -163,21 +163,64 @@ calculateButton.addEventListener("click", function() {
     const numberOfReturns =
         Number(numberOfReturnsInput.value);
 
-     // ==========================================
-    // CHECK USER INPUT
     // ==========================================
+// CHECK MAIN INVESTMENT INPUTS
+// ==========================================
 
-    if (
-        initialInvestment < 0 ||
-        monthlyInvestment < 0 ||
-        investmentPeriod <= 0 ||
-        numberOfReturns <= 0
-    ) {
+// Initial Investment
+if (
+    !Number.isFinite(initialInvestment) ||
+    initialInvestment < 0
+) {
 
-        alert("Please enter valid values.");
+    alert(
+        "Please enter a valid Initial Investment."
+    );
 
-        return;
-    }
+    return;
+}
+
+
+// Monthly Investment
+if (
+    !Number.isFinite(monthlyInvestment) ||
+    monthlyInvestment < 0
+) {
+
+    alert(
+        "Please enter a valid Monthly Investment."
+    );
+
+    return;
+}
+
+
+// Investment Period
+if (
+    !Number.isFinite(investmentPeriod) ||
+    investmentPeriod <= 0
+) {
+
+    alert(
+        "Investment Period must be greater than 0."
+    );
+
+    return;
+}
+
+
+// Number of Return Rates
+if (
+    !Number.isInteger(numberOfReturns) ||
+    numberOfReturns <= 0
+) {
+
+    alert(
+        "Please enter a valid number of return rates."
+    );
+
+    return;
+}
 
     
      // Create an empty array to store the return rates
@@ -199,18 +242,29 @@ calculateButton.addEventListener("click", function() {
             return;
         }
 
-        const rate =
-            Number(input.value);
+        if (input.value === "") {
 
-          // Check return rate
-        if (rate < 0) {
+    alert(
+        "Please enter Return " + i + "."
+    );
 
-            alert(
-                "Return rate cannot be negative."
-            );
+    return;
+}
 
-            return;
-        }
+const rate =
+    Number(input.value);
+    
+        if (
+    !Number.isFinite(rate) ||
+    rate < 0
+) {
+
+    alert(
+        "Please enter a valid return rate."
+    );
+
+    return;
+}
 
 
         returnRates.push(rate);

@@ -229,20 +229,84 @@ targetCalculateButton.addEventListener(
         // VALIDATION
         // ==================================
 
+        // ==========================================
+        // TARGET AMOUNT VALIDATION
+        // ==========================================
+
         if (
-            targetAmount <= 0 ||
-            initialInvestment < 0 ||
-            currentMonthlyInvestment < 0 ||
-            investmentPeriod <= 0 ||
-            annualReturn < 0
+            !Number.isFinite(targetAmount) ||
+            targetAmount <= 0
         ) {
 
             alert(
-                "Please enter valid values."
+                "Target Amount must be greater than 0."
             );
 
             return;
         }
+
+        // ==========================================
+        // INITIAL INVESTMENT VALIDATION
+        // ==========================================
+                
+        if (
+            !Number.isFinite(initialInvestment) ||
+            initialInvestment < 0
+        ) {
+
+            alert(
+                "Please enter a valid Initial Investment."
+            );
+
+            return;
+        }
+
+        // ==========================================
+        // MONTHLY INVESTMENT VALIDATION
+        // ==========================================
+
+        if (
+            !Number.isFinite(currentMonthlyInvestment) ||
+            currentMonthlyInvestment < 0
+        ) {
+
+            alert(
+                "Please enter a valid Monthly Investment."
+            );
+
+            return;
+        }
+
+        // ==========================================
+        // EXPECTED RETURN VALIDATION
+        // ==========================================
+
+        if (
+            !Number.isFinite(annualReturn) ||
+            annualReturn < 0
+        ) {
+
+            alert(
+                "Expected Return cannot be negative."
+            );
+
+            return;
+        }
+
+        // if (
+        //     targetAmount <= 0 ||
+        //     initialInvestment < 0 ||
+        //     currentMonthlyInvestment < 0 ||
+        //     investmentPeriod <= 0 ||
+        //     annualReturn < 0
+        // ) {
+
+        //     alert(
+        //         "Please enter valid values."
+        //     );
+
+        //     return;
+        // }
 
 
         // ==================================
