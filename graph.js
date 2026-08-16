@@ -43,6 +43,11 @@ else {
             "backButton"
         );
 
+    const detailButton =
+    document.getElementById(
+        "detailButton"
+    );
+
 
     // ==========================================
     // CHART DATA
@@ -255,5 +260,19 @@ else {
 
         }
     );
+
+    // ==========================================
+// VIEW DETAILS
+// ==========================================
+
+detailButton.addEventListener(
+    "click",
+    function() {
+
+        window.location.href =
+            "detail.html";
+
+    }
+);
 
 }

@@ -45,6 +45,9 @@ else {
     const backButton =
         document.getElementById("backButton");
 
+    const graphButton =
+    document.getElementById("graphButton");
+
 
     // ==========================================
     // CREATE RETURN RATE OPTIONS
@@ -382,5 +385,15 @@ else {
                 "index.html";
         }
     );
+
+    graphButton.addEventListener(
+    "click",
+    function() {
+
+        window.location.href =
+            "graph.html";
+
+    }
+);
 
 }
