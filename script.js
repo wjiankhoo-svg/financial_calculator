@@ -275,6 +275,8 @@ calculateButton.addEventListener("click", function() {
         // Add result to HTML
         resultHTML += `
 
+            <div class="result-card">
+
             <h3>${rate}% Return</h3>
 
             <p>
@@ -287,14 +289,47 @@ calculateButton.addEventListener("click", function() {
                 RM ${investmentProfit.toFixed(2)}
             </p>
 
-            <hr>
+            </div>
         `;
     }
 
+// ==========================================
+// SAVE INVESTMENT DATA
+// ==========================================
 
-    // ==========================================
-    // DISPLAY RESULT
-    // ==========================================
+function saveInvestmentData(
+    initialInvestment,
+    monthlyInvestment,
+    investmentPeriod,
+    returnRates
+) {
+
+    const investmentData = {
+
+        initialInvestment:
+            initialInvestment,
+
+        monthlyInvestment:
+            monthlyInvestment,
+
+        investmentPeriod:
+            investmentPeriod,
+
+        returnRates:
+            returnRates
+    };
+
+
+    const dataToSave =
+        JSON.stringify(investmentData);
+
+
+    localStorage.setItem(
+        "investmentData",
+        dataToSave
+    );
+}
+
 
     // ==========================================
 // DISPLAY RESULT
@@ -307,6 +342,16 @@ result.innerHTML = resultHTML;
 // CREATE VIEW DETAILS BUTTON
 // ==========================================
 
+// const viewDetailsButton =
+//     document.createElement("button");
+
+// viewDetailsButton.textContent =
+//     "View Details";
+
+// ==========================================
+// VIEW DETAILS BUTTON
+// ==========================================
+
 const viewDetailsButton =
     document.createElement("button");
 
@@ -314,8 +359,20 @@ viewDetailsButton.textContent =
     "View Details";
 
 
+// ==========================================
+// VIEW GRAPH BUTTON
+// ==========================================
+
+const viewGraphButton =
+    document.createElement("button");
+
+viewGraphButton.textContent =
+    "View Graph";
+
+
 // Add button to result area
 result.appendChild(viewDetailsButton);
+result.appendChild(viewGraphButton);
 
 
 // ==========================================
@@ -328,32 +385,13 @@ viewDetailsButton.addEventListener(
 
         // Create an object containing
         // all information entered by the user
-        const investmentData = {
+        {
 
-            initialInvestment:
-                initialInvestment,
-
-            monthlyInvestment:
-                monthlyInvestment,
-
-            investmentPeriod:
-                investmentPeriod,
-
-            returnRates:
-                returnRates
-        };
-
-
-        // Convert the JavaScript object
-        // into a JSON string
-        const dataToSave =
-            JSON.stringify(investmentData);
-
-
-        // Save the data in browser storage
-        localStorage.setItem(
-            "investmentData",
-            dataToSave
+        saveInvestmentData(
+            initialInvestment,
+            monthlyInvestment,
+            investmentPeriod,
+            returnRates
         );
 
 
@@ -361,6 +399,32 @@ viewDetailsButton.addEventListener(
         window.location.href =
             "detail.html";
     }
-);
+    });
+
+// ==========================================
+// VIEW GRAPH
+// ==========================================
+
+viewGraphButton.addEventListener(
+    "click",
+    function() {
+
+        // saveInvestmentData();
+        
+        // Create an object containing
+        // all information entered by the user
+        {
+
+        saveInvestmentData(
+            initialInvestment,
+            monthlyInvestment,
+            investmentPeriod,
+            returnRates
+        );
+
+        window.location.href =
+            "graph.html";
+    }
+});
 
 });

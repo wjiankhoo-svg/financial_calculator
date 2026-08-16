@@ -5,6 +5,8 @@
 const savedData =
     localStorage.getItem("investmentData");
 
+// const investmentChart =
+//     document.getElementById("investmentChart");
 
 // ==========================================
 // CHECK IF DATA EXISTS
@@ -129,6 +131,8 @@ else {
         let totalInvested =
             initialInvestment;
 
+        // const chartLabels = [];
+        // const chartValues = [];
 
         // ==========================================
         // CREATE TABLE
@@ -155,7 +159,7 @@ else {
                 </tr>
         `;
 
-
+        
         // ==========================================
         // CALCULATE EACH MONTH
         // ==========================================
@@ -199,6 +203,10 @@ else {
                     balance.toFixed(2)
                 );
 
+            // chartLabels.push(month);
+
+            // chartValues.push(balance);
+
 
             // Update total invested
             totalInvested =
@@ -233,6 +241,70 @@ else {
                 </tr>
             `;
         }
+
+//         // ==========================================
+// // CREATE INVESTMENT CHART
+// // ==========================================
+
+// // removes the old chart before creating the new one.
+// if (window.currentInvestmentChart) {
+
+//     window.currentInvestmentChart.destroy();
+
+// }
+
+
+// window.currentInvestmentChart =
+//     new Chart(investmentChart, {
+
+//         type: "line",
+
+//         data: {
+
+//             labels: chartLabels,
+
+//             datasets: [{
+
+//                 label:
+//                     rate + "% Return",
+
+//                 data:
+//                     chartValues,
+
+//                 tension: 0.2
+
+//             }]
+//         },
+
+//         options: {
+
+//             responsive: true,
+
+//             scales: {
+
+//                 x: {
+
+//                     title: {
+
+//                         display: true,
+
+//                         text: "Month"
+//                     }
+//                 },
+
+//                 y: {
+
+//                     title: {
+
+//                         display: true,
+
+//                         text: "Portfolio Value (RM)"
+//                     }
+//                 }
+//             }
+//         }
+//     });
+
 
 
         // ==========================================

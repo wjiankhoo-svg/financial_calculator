@@ -48,3 +48,21 @@ Phase 3 — Compare Different Investment Returns
 # Add a "View Details" page
 
 Phase 4 - show the detail of each month at differet html
+
+Phase 5 — improve the UI + add a portfolio growth chart.
+│
+├── 5.1  Improve summary result
+│
+├── 5.2  Improve monthly detail table
+│
+├── 5.3  Add portfolio growth chart
+│
+└── 5.4  Make the chart respond to different return rates
+
+Phase 6 — Separate Details and Graph
+
+Phase 7 — Target Calculator:
+
+Phase 8 - let user to choose how many year they want to calculate
+        - also need like can go bck calculator or go view graph, bck to calculator or view detail
+

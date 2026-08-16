@@ -1,0 +1,20 @@
+
+
+.result-card {
+
+    border: 1px solid black;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    width: 300px;
+}
+
+
+.final-value {
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
