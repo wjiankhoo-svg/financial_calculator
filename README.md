@@ -29,11 +29,11 @@ Investment Calculator
        ├── Projected value
        └── Gap to target
 
-# ############################################################ #
+# ##########################################################
 
 Phase 1 — Basic Compound Interest Calculator
 
-# investment-calculator/
+-Investment-calculator/
 │
 ├── index.html
 ├── style.css
@@ -44,8 +44,8 @@ Phase 2 — Compound Interest + Monthly Investment
 Phase 3 — Compare Different Investment Returns
         — Actual Calculation + Comparison Result
 
-# How many returns do you want to compare?How many returns do you want to compare?
-# Add a "View Details" page
+        -How many returns do you want to compare?
+        -Add a "View Details" page
 
 Phase 4 - show the detail of each month at differet html
 
@@ -99,33 +99,43 @@ Phase 7 — Target Calculator:
 Phase 8 - let user to choose how many year they want to calculate
 
 Phase 11 — Profit vs Contribution Analysis
-# index.html = Home
-# calculator.html = Calculator
-# target.html = Target
-# detail.html = Details
-# graph.html = Graph
+        -index.html = Home
+        -calculator.html = Calculator
+        -target.html = Target
+        -detail.html = Details
+        -graph.html = Graph
+        -compound interest calculator / target calculator
 
 Phase 12 — Input Validation & Error Handling
 
-
-
-Phase 8 — Target vs Reality
-
-Phase 9 — What-If Investment Scenarios
-
-Phase 10 — Advanced Return Comparison
-
-
-
-Phase 13 — Accuracy & Calculation Testing
-
-Phase 14 — Save / Reset / Local Storage
-
 Phase 15 — UI / UX & Responsive Design
 
-Phase 16 — Final Testing & Deployment
+
+15.1 Overall Design
+       ↓
+15.2 Homepage
+       ↓
+15.3 Calculator
+       ↓
+15.4 Target Calculator
+       ↓
+15.5 Details
+       ↓
+15.6 Graph
+       ↓
+15.7 Navigation
+       ↓
+15.8 Error Messages
+       ↓
+15.9 Responsive Design
+       ↓
+15.10 Mobile Testing
+       ↓
+15.11 Accessibility
+       ↓
+15.12 Final Polish
+
+# Let user choose need months / years
+# need to add like 7.5 also can be calculate
 
 
-
-## need to add like whether use 
-   >> compound interest calculator / target calculator

@@ -1,0 +1,54 @@
+
+
+.result-card {
+
+    border: 1px solid black;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    width: 300px;
+}
+
+
+.final-value {
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+/* ==========================================
+   HOMEPAGE
+   ========================================== */
+
+.home-card {
+
+    border: 1px solid #ccc;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 500px;
+
+    border-radius: 10px;
+
+}
+
+
+.home-card h3 {
+
+    margin-top: 0;
+
+}
+
+
+.home-card button {
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+}

@@ -278,6 +278,24 @@ targetCalculateButton.addEventListener(
         }
 
         // ==========================================
+// INVESTMENT PERIOD VALIDATION
+// ==========================================
+
+if (
+    !Number.isFinite(investmentPeriod) ||
+    investmentPeriod <= 0
+) {
+
+    alert(
+        "Investment Period must be greater than 0."
+    );
+
+    return;
+}
+
+
+
+        // ==========================================
         // EXPECTED RETURN VALIDATION
         // ==========================================
 
@@ -413,58 +431,120 @@ else {
 
         targetResult.innerHTML = `
 
-            <div class="result-card">
+            <div class="target-result-card">
 
-                <h2>
+                <h4>
                     Your Target Plan
-                </h2>
+                </h4>
 
 
-                <p>
-                    Target Amount:
-                    RM ${targetAmount.toFixed(2)}
-                </p>
+                <div class="target-result-item">
+
+            <span>
+                Target Amount
+            </span>
+
+            <strong>
+                RM ${targetAmount.toFixed(2)}
+            </strong>
+
+        </div>
 
 
-                <p>
-                    Investment Period:
-                    ${investmentPeriod} years
-                </p>
+                <div class="target-result-item">
+
+            <span>
+                Investment Period
+            </span>
+
+            <strong>
+                ${investmentPeriod} years
+            </strong>
+
+        </div>
+
+                 <div class="target-result-item">
+
+            <span>
+                Expected Return
+            </span>
+
+            <strong>
+                ${annualReturn}%
+            </strong>
+
+        </div>
 
 
-                <p>
-                    Expected Return:
-                    ${annualReturn}%
-                </p>
+
+                <div class="required-investment">
+
+            <span>
+                Required Monthly Investment
+            </span>
+
+            <strong>
+                RM ${requiredMonthlyInvestment.toFixed(2)}
+            </strong>
+
+        </div>
+
+    </div>
+
+    <div class="target-result-card">
+
+        <h3>
+            Your Current Plan
+        </h3>
 
 
-                <hr>
+
+                <div class="target-result-item">
+
+            <span>
+                Current Monthly Investment
+            </span>
+
+            <strong>
+                RM ${currentMonthlyInvestment.toFixed(2)}
+            </strong>
+
+        </div>
 
 
-                <h3>
-                    Required Monthly Investment
-                </h3>
+        <div class="target-result-item">
+
+            <span>
+                Expected Final Value
+            </span>
+
+            <strong>
+                RM ${currentFinalValue.toFixed(2)}
+            </strong>
+
+        </div>
 
 
-                <p class="final-value">
+        <div class="monthly-difference">
 
-                    RM ${requiredMonthlyInvestment.toFixed(2)}
+            <span>
+                Monthly Shortfall / Surplus
+            </span>
 
-                </p>
+            <strong>
+                RM ${monthlyDifference.toFixed(2)}
+            </strong>
 
-                <p>
-                    Your Current Monthly Investment:
-                    RM ${currentMonthlyInvestment.toFixed(2)}
-                </p>
-
+            
                 ${monthlyStatus}
+            
 
-                <hr>
+        </div>
 
+    </div>
 
-            </div>
-
-        `;
+`;
+               
     }
 );
 

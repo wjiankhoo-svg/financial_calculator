@@ -300,15 +300,26 @@ const rate =
 
     let resultHTML = `
 
-        <h3>Investment Comparison</h3>
+    <div class="result-summary">
 
-        <p>
-            Total Money Invested:
-            RM ${totalInvested.toFixed(2)}
-        </p>
+        <h3>
+            Investment Comparison
+        </h3>
 
-        <hr>
-    `;
+        <div class="summary-value">
+
+            <span>
+                Total Money Invested
+            </span>
+
+            <strong>
+                RM ${totalInvested.toFixed(2)}
+            </strong>
+
+        </div>
+
+    </div>
+`;
 
 
     // ==========================================
@@ -332,25 +343,41 @@ const rate =
             finalValue - totalInvested;
 
 
-        // Add result to HTML
         resultHTML += `
 
-            <div class="result-card">
+    <div class="result-card">
 
-            <h3>${rate}% Return</h3>
+        <h3>
+            ${rate}% Return
+        </h3>
 
-            <p>
-                Final Value:
+        <div class="result-item">
+
+            <span>
+                Final Value
+            </span>
+
+            <strong>
                 RM ${finalValue.toFixed(2)}
-            </p>
+            </strong>
 
-            <p>
-                Investment Profit:
+        </div>
+
+
+        <div class="result-item">
+
+            <span>
+                Investment Profit
+            </span>
+
+            <strong>
                 RM ${investmentProfit.toFixed(2)}
-            </p>
+            </strong>
 
-            </div>
-        `;
+        </div>
+
+    </div>
+`;
     }
 
 // ==========================================

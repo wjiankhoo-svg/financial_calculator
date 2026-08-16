@@ -13,74 +13,193 @@
 
 <body>
 
-    <h1>Investment Calculator</h1>
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
 
-    <h2>Compound Interest Calculator</h2>
+    <header class="page-header">
 
-    <label for="initialInvestment">Initial Investment (RM)</label>
-    <input type="number" id="initialInvestment" min="0">
-    <!-- creates the input box. / JavaScript will use this ID to get the user's input. -->
+        <h1>
+            Investment Calculator
+        </h1>
 
-    <br><br>
+        <p>
+            Calculate your investment growth and
+            compare different return rates.
+        </p>
 
-    <label for="monthlyInvestment">Monthly Investment (RM)</label>
-    <input type="number" id="monthlyInvestment" min="0">
+        <button id="homeButton">
+            ← Home
+        </button>
 
-    <br><br>
-
-    <label for="investmentPeriod">Investment Period (Years)</label>
-    <input type="number" id="investmentPeriod">
-
-    <br><br> <!--  Line Break -->
-
-    <label for="numberOfReturns">
-    How many return rates do you want to compare?
-    </label>
-
-    <input
-    type="number"
-    id="numberOfReturns" >
-
-<button id="createReturnInputsButton">
-    Choose Return Rates
-</button>
-
- <!-- <br><br>
-
-    <label for="annualReturn">Annual Return (%)</label>
-    <input type="number" id="annualReturn"> -->
-
-    <br><br>
-
-    
-    <!-- JavaScript will create the return rate inputs here. -->
-    <div id="returnInputs"></div>
-
-    <br>
+    </header>
 
 
-    <!-- Calculate -->
-    <button id="calculateButton">
-        Calculate
-    </button>
+    <!-- ==========================================
+         MAIN CONTENT
+         ========================================== -->
 
-    <!-- <button id="targetButton">
-        Target Calculator
-    </button> -->
-
-    <button id="homeButton">
-    ← Home
-    </button>
+    <main class="calculator-main">
 
 
-    <h2>Result</h2>
-    <p id="result"></p>
+        <!-- ======================================
+             INVESTMENT INFORMATION
+             ====================================== -->
 
-    <br>
+        <section class="calculator-card">
 
-    
+            <h2>
+                Investment Information
+            </h2>
 
-    
+            <p>
+                Enter the amount you plan to invest
+                and how long you plan to invest.
+            </p>
+
+
+            <!-- Initial Investment -->
+
+            <div class="input-group">
+
+                <label for="initialInvestment">
+                    Initial Investment (RM)
+                </label>
+
+                <input
+                    type="number"
+                    id="initialInvestment"
+                    min="0"
+                    step="0.01"
+                >
+
+            </div>
+
+
+            <!-- Monthly Investment -->
+
+            <div class="input-group">
+
+                <label for="monthlyInvestment">
+                    Monthly Investment (RM)
+                </label>
+
+                <input
+                    type="number"
+                    id="monthlyInvestment"
+                    min="0"
+                    step="0.01"
+                >
+
+            </div>
+
+
+            <!-- Investment Period -->
+
+            <div class="input-group">
+
+                <label for="investmentPeriod">
+                    Investment Period (Years)
+                </label>
+
+                <input
+                    type="number"
+                    id="investmentPeriod"
+                    min="1"
+                    step="0.1"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             RETURN RATE COMPARISON
+             ====================================== -->
+
+        <section class="calculator-card">
+
+            <h2>
+                Return Rate Comparison
+            </h2>
+
+            <p>
+                Choose how many investment return
+                rates you want to compare.
+            </p>
+
+
+            <div class="input-group">
+
+                <label for="numberOfReturns">
+                    Number of Return Rates
+                </label>
+
+                <input
+                    type="number"
+                    id="numberOfReturns"
+                    min="1"
+                    max="10"
+                    step="1"
+                >
+
+            </div>
+
+
+            <button
+                id="createReturnInputsButton"
+                class="secondary-button"
+            >
+                Choose Return Rates
+            </button>
+
+
+            <!-- JavaScript will create
+                 the return rate inputs here -->
+
+            <div id="returnInputs">
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             CALCULATE
+             ====================================== -->
+
+        <div class="calculate-area">
+
+            <button
+                id="calculateButton"
+                class="primary-button"
+            >
+                Calculate Investment
+            </button>
+
+        </div>
+
+
+        <!-- ======================================
+             RESULTS
+             ====================================== -->
+
+        <section class="results-section">
+
+            <h2>
+                Investment Results
+            </h2>
+
+            <div id="result">
+
+            </div>
+
+        </section>
+
+
+    </main>
+
 
     <script src="script.js"></script>
 
