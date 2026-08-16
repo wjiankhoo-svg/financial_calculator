@@ -9,8 +9,12 @@ const numberOfReturnsInput = document.getElementById("numberOfReturns");
 
 
 // Buttons
-const targetButton =
-    document.getElementById("targetButton");
+// const targetButton =
+//     document.getElementById("targetButton");
+
+const homeButton =
+    document.getElementById("homeButton");
+
 const createReturnInputsButton = document.getElementById("createReturnInputsButton");
 const calculateButton = document.getElementById("calculateButton");
 
@@ -429,18 +433,29 @@ viewGraphButton.addEventListener(
     }
 });
 
+
+});
+
 // ==========================================
 // TARGET CALCULATOR
 // ==========================================
 
-targetButton.addEventListener(
+// targetButton.addEventListener(
+//     "click",
+//     function() {
+
+//         window.location.href =
+//             "target.html";
+
+//     }
+// );
+
+homeButton.addEventListener(
     "click",
     function() {
 
         window.location.href =
-            "target.html";
+            "index.html";
 
     }
 );
-
-});

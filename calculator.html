@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Investment Calculator</title>
+
+    <link rel="stylesheet" href="stle.css">
+</head>
+
+<body>
+
+    <h1>Investment Calculator</h1>
+
+    <h2>Compound Interest Calculator</h2>
+
+    <label for="initialInvestment">Initial Investment (RM)</label>
+    <input type="number" id="initialInvestment" min="0">
+    <!-- creates the input box. / JavaScript will use this ID to get the user's input. -->
+
+    <br><br>
+
+    <label for="monthlyInvestment">Monthly Investment (RM)</label>
+    <input type="number" id="monthlyInvestment" min="0">
+
+    <br><br>
+
+    <label for="investmentPeriod">Investment Period (Years)</label>
+    <input type="number" id="investmentPeriod">
+
+    <br><br> <!--  Line Break -->
+
+    <label for="numberOfReturns">
+    How many return rates do you want to compare?
+    </label>
+
+    <input
+    type="number"
+    id="numberOfReturns" >
+
+<button id="createReturnInputsButton">
+    Choose Return Rates
+</button>
+
+ <!-- <br><br>
+
+    <label for="annualReturn">Annual Return (%)</label>
+    <input type="number" id="annualReturn"> -->
+
+    <br><br>
+
+    
+    <!-- JavaScript will create the return rate inputs here. -->
+    <div id="returnInputs"></div>
+
+    <br>
+
+
+    <!-- Calculate -->
+    <button id="calculateButton">
+        Calculate
+    </button>
+
+    <!-- <button id="targetButton">
+        Target Calculator
+    </button> -->
+
+    <button id="homeButton">
+    ← Home
+    </button>
+
+
+    <h2>Result</h2>
+    <p id="result"></p>
+
+    <br>
+
+    
+
+    
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

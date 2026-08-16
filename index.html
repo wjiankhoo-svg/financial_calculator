@@ -1,82 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Investment Calculator</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="stle.css">
+    <title>Investment Analysis</title>
+
+    <link
+        rel="stylesheet"
+        href="stle.css"
+    >
+
 </head>
+
 
 <body>
 
-    <h1>Investment Calculator</h1>
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
 
-    <h2>Compound Interest Calculator</h2>
+    <header>
 
-    <label for="initialInvestment">Initial Investment (RM)</label>
-    <input type="number" id="initialInvestment" min="0">
-    <!-- creates the input box. / JavaScript will use this ID to get the user's input. -->
+        <h1>
+            Investment Analysis
+        </h1>
 
-    <br><br>
+        <p>
+            Understand your investment - 
+            Compare returns, and Plan your target.
+        </p>
 
-    <label for="monthlyInvestment">Monthly Investment (RM)</label>
-    <input type="number" id="monthlyInvestment" min="0">
-
-    <br><br>
-
-    <label for="investmentPeriod">Investment Period (Years)</label>
-    <input type="number" id="investmentPeriod">
-
-    <br><br> <!--  Line Break -->
-
-    <label for="numberOfReturns">
-    How many return rates do you want to compare?
-    </label>
-
-    <input
-    type="number"
-    id="numberOfReturns" >
-
-<button id="createReturnInputsButton">
-    Choose Return Rates
-</button>
-
- <!-- <br><br>
-
-    <label for="annualReturn">Annual Return (%)</label>
-    <input type="number" id="annualReturn"> -->
-
-    <br><br>
-
-    
-    <!-- JavaScript will create the return rate inputs here. -->
-    <div id="returnInputs"></div>
-
-    <br>
+    </header>
 
 
-    <!-- Calculate -->
-    <button id="calculateButton">
-        Calculate
-    </button>
+    <!-- ==========================================
+         MAIN CONTENT
+         ========================================== -->
+
+    <main>
+
+        <h2>
+            What would you like to do?
+        </h2>
 
 
-    <h2>Result</h2>
-    <p id="result"></p>
+        <!-- ======================================
+             INVESTMENT CALCULATOR
+             ====================================== -->
 
-    <br>
+        <div class="home-card">
 
-    <button id="targetButton">
-        Target Calculator
-    </button>
+            <h3>
+                Investment Calculator
+            </h3>
 
-    
+            <p>
+                Calculate how your investment
+                can grow over time and compare
+                different return rates.
+            </p>
 
-    <script src="script.js"></script>
+            <button id="calculatorButton">
+
+                Start Investment Calculator
+
+            </button>
+
+        </div>
+
+
+        <br>
+
+
+        <!-- ======================================
+             TARGET CALCULATOR
+             ====================================== -->
+
+        <div class="home-card">
+
+            <h3>
+                Target Calculator
+            </h3>
+
+            <p>
+                Find out how much you need to
+                invest every month to reach
+                your financial target.
+            </p>
+
+            <button id="targetButton">
+
+                Start Target Calculator
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+    <script src="home.js"></script>
 
 </body>
 

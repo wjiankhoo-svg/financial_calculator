@@ -43,6 +43,9 @@ else {
             "backButton"
         );
 
+    const homeButton =
+    document.getElementById("homeButton");
+
     const detailButton =
     document.getElementById(
         "detailButton"
@@ -256,7 +259,7 @@ else {
         function() {
 
             window.location.href =
-                "index.html";
+                "calculator.html";
 
         }
     );
@@ -274,5 +277,14 @@ detailButton.addEventListener(
 
     }
 );
+
+homeButton.addEventListener(
+    "click",
+    function() {
+
+        window.location.href =
+            "index.html";
+
+    });
 
 }

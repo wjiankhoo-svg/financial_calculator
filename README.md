@@ -97,5 +97,32 @@ Phase 7 — Target Calculator:
 
 
 Phase 8 - let user to choose how many year they want to calculate
-        - also need like can go bck calculator or go view graph, bck to calculator or view detail
 
+Phase 11 — Profit vs Contribution Analysis
+# index.html = Home
+# calculator.html = Calculator
+# target.html = Target
+# detail.html = Details
+# graph.html = Graph
+
+
+Phase 8 — Target vs Reality
+
+Phase 9 — What-If Investment Scenarios
+
+Phase 10 — Advanced Return Comparison
+
+Phase 12 — Input Validation & Error Handling
+
+Phase 13 — Accuracy & Calculation Testing
+
+Phase 14 — Save / Reset / Local Storage
+
+Phase 15 — UI / UX & Responsive Design
+
+Phase 16 — Final Testing & Deployment
+
+
+
+## need to add like whether use 
+   >> compound interest calculator / target calculator

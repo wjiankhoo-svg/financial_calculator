@@ -46,7 +46,10 @@ else {
         document.getElementById("backButton");
 
     const graphButton =
-    document.getElementById("graphButton");
+        document.getElementById("graphButton");
+
+    const homeButton =
+        document.getElementById("homeButton");
 
 
     // ==========================================
@@ -382,7 +385,7 @@ else {
         function() {
 
             window.location.href =
-                "index.html";
+                "calculator.html";
         }
     );
 
@@ -392,6 +395,16 @@ else {
 
         window.location.href =
             "graph.html";
+
+    }
+);
+
+homeButton.addEventListener(
+    "click",
+    function() {
+
+        window.location.href =
+            "index.html";
 
     }
 );
