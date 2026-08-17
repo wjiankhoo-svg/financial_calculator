@@ -102,6 +102,12 @@ else {
         const investmentPeriod =
             investmentData.investmentPeriod;
 
+        const investmentPeriodUnit =
+    investmentData.investmentPeriodUnit;
+
+const totalMonths =
+    investmentData.totalMonths;
+
 
         // ==========================================
         // CALCULATE MONTHLY RATE
@@ -118,8 +124,7 @@ else {
         // TOTAL NUMBER OF MONTHS
         // ==========================================
 
-        const totalMonths =
-            investmentPeriod * 12;
+        //const totalMonths =  investmentPeriod * 12;
 
 
         // ==========================================
@@ -147,6 +152,8 @@ else {
         let tableHTML = `
 
             <h2>${rate}% Return</h2>
+            (${investmentPeriod} ${investmentPeriodUnit})
+            </h2>
 
             <table border="1">
 

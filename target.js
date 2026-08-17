@@ -26,6 +26,11 @@ const targetInvestmentPeriodInput =
         "targetInvestmentPeriod"
     );
 
+    const targetInvestmentPeriodUnitInput =
+    document.getElementById(
+        "targetInvestmentPeriodUnit"
+    );
+
 
 const targetReturnInput =
     document.getElementById(
@@ -58,7 +63,7 @@ function calculateFinalValue(
     initialInvestment,
     monthlyInvestment,
     annualReturn,
-    investmentPeriod
+    totalMonths
 ) {
 
     // Convert annual return to decimal
@@ -72,8 +77,7 @@ function calculateFinalValue(
 
 
     // Convert years to months
-    const totalMonths =
-        investmentPeriod * 12;
+    //const totalMonths =investmentPeriod * 12;
 
 
     // Start with initial investment
@@ -130,7 +134,8 @@ function findRequiredMonthlyInvestment(
     targetAmount,
     initialInvestment,
     annualReturn,
-    investmentPeriod
+    totalMonths
+    //investmentPeriod
 ) {
 
     let low = 0;
@@ -154,7 +159,8 @@ function findRequiredMonthlyInvestment(
                 initialInvestment,
                 middle,
                 annualReturn,
-                investmentPeriod
+                 totalMonths
+                 //investmentPeriod
             );
 
 
@@ -218,11 +224,30 @@ targetCalculateButton.addEventListener(
                 targetInvestmentPeriodInput.value
             );
 
+        const investmentPeriodUnit =
+    targetInvestmentPeriodUnitInput.value;
+
 
         const annualReturn =
             Number(
                 targetReturnInput.value
             );
+
+        let totalMonths;
+
+
+if (investmentPeriodUnit === "years") {
+
+    totalMonths =
+        investmentPeriod * 12;
+
+}
+else {
+
+    totalMonths =
+        investmentPeriod;
+
+}
 
 
         // ==================================
@@ -352,7 +377,8 @@ if (
                 targetAmount,
                 initialInvestment,
                 annualReturn,
-                investmentPeriod
+                totalMonths
+                  //investmentPeriod
             );
 
 
@@ -365,7 +391,8 @@ if (
                 initialInvestment,
                 currentMonthlyInvestment,
                 annualReturn,
-                investmentPeriod
+                  totalMonths
+                  //investmentPeriod
             );
 
 
@@ -429,6 +456,11 @@ else {
         // DISPLAY RESULT
         // ==================================
 
+        const periodText =
+    investmentPeriodUnit === "years"
+        ? `${investmentPeriod} years`
+        : `${investmentPeriod} months`;
+
         targetResult.innerHTML = `
 
             <div class="target-result-card">
@@ -458,7 +490,7 @@ else {
             </span>
 
             <strong>
-                ${investmentPeriod} years
+                ${periodText}
             </strong>
 
         </div>

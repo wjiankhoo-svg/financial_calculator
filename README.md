@@ -136,6 +136,7 @@ Phase 15 — UI / UX & Responsive Design
 15.12 Final Polish
 
 # Let user choose need months / years
-# need to add like 7.5 also can be calculate
+# need for the rate like 2.5%
+# mobile platform also
 
 

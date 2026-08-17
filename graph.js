@@ -58,6 +58,13 @@ else {
 
     const datasets = [];
 
+    // ==========================================
+    // GET TOTAL NUMBER OF MONTHS
+    // ==========================================
+
+    const totalMonths =
+        investmentData.totalMonths;
+
         // ==========================================
     // CALCULATE EACH RETURN RATE
     // ==========================================
@@ -76,9 +83,9 @@ else {
             annualRate / 12;
 
 
-        // Total months
-        const totalMonths =
-            investmentData.investmentPeriod * 12;
+        // // Total months
+        // const totalMonths =
+        //     investmentData.investmentPeriod * 12;
 
 
         // Starting balance
@@ -158,8 +165,8 @@ else {
     // CREATE MONTH LABELS
     // ==========================================
 
-    const totalMonths =
-        investmentData.investmentPeriod * 12;
+    // const totalMonths =
+    //     investmentData.investmentPeriod * 12;
 
 
     const labels = [];

@@ -6,7 +6,10 @@ const monthlyInvestmentInput = document.getElementById("monthlyInvestment");
 const investmentPeriodInput = document.getElementById("investmentPeriod");
 // Number of return rates
 const numberOfReturnsInput = document.getElementById("numberOfReturns");
-
+const investmentPeriodUnitInput =
+    document.getElementById(
+        "investmentPeriodUnit"
+    );
 
 // Buttons
 // const targetButton =
@@ -35,12 +38,15 @@ createReturnInputsButton.addEventListener("click", function() {
 
 
     // Check if the user entered a valid number
-    if (numberOfReturns <= 0) {
+    if (
+    !Number.isInteger(numberOfReturns) ||
+    numberOfReturns <= 0
+) {
 
-        alert("Please enter a valid number.");
+    alert("Please enter a valid number of return rates.");
 
-        return;
-    }
+    return;
+}
 
 
     // Remove any old return inputs
@@ -96,7 +102,8 @@ function calculateInvestment(
     initialInvestment,
     monthlyInvestment,
     annualReturn,
-    investmentPeriod
+    //investmentPeriod
+    totalMonths
 ) {
 
     // Convert annual return from percentage
@@ -110,7 +117,7 @@ function calculateInvestment(
 
     // Convert investment period from years
     // to number of months
-    const totalMonths = investmentPeriod * 12;
+    //const totalMonths = investmentPeriod * 12;
 
 
     // Start with the initial investment
@@ -159,9 +166,30 @@ calculateButton.addEventListener("click", function() {
     const monthlyInvestment = Number(monthlyInvestmentInput.value);
     // const annualReturn = Number(annualReturnInput.value);
     const investmentPeriod = Number(investmentPeriodInput.value);
-     // Get number of return rates
+     
+    const investmentPeriodUnit =
+    investmentPeriodUnitInput.value;
+
+    // Get number of return rates
     const numberOfReturns =
         Number(numberOfReturnsInput.value);
+
+
+        let totalMonths;
+
+
+if (investmentPeriodUnit === "years") {
+
+    totalMonths =
+        investmentPeriod * 12;
+
+}
+else {
+
+    totalMonths =
+        investmentPeriod;
+
+}
 
     // ==========================================
 // CHECK MAIN INVESTMENT INPUTS
@@ -285,8 +313,7 @@ const rate =
     // CALCULATE TOTAL INVESTMENT
     // ==========================================
 
-    const totalMonths =
-        investmentPeriod * 12;
+    //const totalMonths =  investmentPeriod * 12;
 
 
     const totalInvested =
@@ -334,7 +361,8 @@ const rate =
                 initialInvestment,
                 monthlyInvestment,
                 rate,
-                investmentPeriod
+                //investmentPeriod
+                totalMonths
             );
 
 
@@ -388,6 +416,8 @@ function saveInvestmentData(
     initialInvestment,
     monthlyInvestment,
     investmentPeriod,
+    investmentPeriodUnit,
+    totalMonths,
     returnRates
 ) {
 
@@ -401,6 +431,12 @@ function saveInvestmentData(
 
         investmentPeriod:
             investmentPeriod,
+
+        investmentPeriodUnit:
+            investmentPeriodUnit,
+
+    totalMonths:
+        totalMonths,
 
         returnRates:
             returnRates
@@ -478,6 +514,8 @@ viewDetailsButton.addEventListener(
             initialInvestment,
             monthlyInvestment,
             investmentPeriod,
+            investmentPeriodUnit,
+            totalMonths,
             returnRates
         );
 
@@ -506,6 +544,8 @@ viewGraphButton.addEventListener(
             initialInvestment,
             monthlyInvestment,
             investmentPeriod,
+            investmentPeriodUnit,
+            totalMonths,
             returnRates
         );
 
