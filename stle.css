@@ -350,7 +350,7 @@ hr {
 
     body {
 
-        padding: 15px;
+        padding: 10px;
 
     }
 
@@ -598,6 +598,14 @@ hr {
         font-size: 24px;
 
     }
+
+     #monthlyResult {
+
+        overflow-x: auto;
+
+    }
+
+    
 }
 
 /* ==========================================
@@ -1160,6 +1168,14 @@ hr {
     justify-content: center;
 
     gap: 10px;
+
+}
+
+.return-selector {
+
+    flex-wrap: wrap;
+
+    gap: 8px;
 
 }
 
