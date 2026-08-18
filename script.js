@@ -70,6 +70,10 @@ createReturnInputsButton.addEventListener("click", function() {
 
         input.type = "number";
 
+        input.step = "0.01";
+
+        input.min = "0";
+
         input.id =
             "return" + i;
 
